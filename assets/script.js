@@ -65,11 +65,14 @@ function startTimer() { //timer function
         if (time === 0 || questionCounter === questions.length) {
             clearInterval(timeInterval)
             endQuiz()
+            //questionCointainer.classList.add('hidden')
+
         }
     }, 1000)
 }
 
-function endQuiz() { // endqui function to add conditions
+function endQuiz() { // endquiz function to add conditions
+    questionCointainer.textContent = "" // so questions won't display in the end
     console.log('quiz is over')
     var endingHeader = document.createElement('h3') // creating h3 element with JS
     endingHeader.textContent = "Quiz has ended! Enter your name below"
